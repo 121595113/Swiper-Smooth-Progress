@@ -115,6 +115,7 @@
 
   <script>
     var mySwiper = new Swiper('.swiper-container',{
+    	mode: 'vertical',
       progress:true,
       onProgressChange: function(swiper){
         for (var i = 0; i < swiper.slides.length; i++){
@@ -126,7 +127,7 @@
           var translate = progress*swiper.width/2;  
           var opacity = 1 - Math.min(Math.abs(progress),1);
           slide.style.opacity = opacity;
-          swiper.setTransform(slide,'rotateY('+rotate+'deg) translate3d('+translate+'px,0,0)');
+          swiper.setTransform(slide,'rotateX('+rotate+'deg) translate3d(0,0,0)');
         }
       },
       onTouchStart:function(swiper){
